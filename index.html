@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapFinder - Image Search Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>SnapFinder</h1>
+            <p class="tagline">Search and discover stunning images from creators worldwide.</p>
+        </div>
+        <form id="form" class="search-bar">
+            <input type="text" id="search-input" placeholder="Search Photos">
+            <button type="submit" class="search-btn" title="Search"><i class="fa fa-search"></i></button>
+        </form>
+        <p class="search-result hidden">Search result for "Toji"</p>
+    </header>
+
+    <div class="image-container"></div>
+    <div class="image-details hidden"></div>
+
+    <footer class="pagination"></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

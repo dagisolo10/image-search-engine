@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --main: #6F40E0;
+    --secondary: #008cff;
+    --black: #121212;
+    --white: #fff;
+    --text-faded: hsl(0, 0%, 70%);
+    --transition: 0.3s ease;
+    --radius: 0.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--white);
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5em 2em;
+    gap: 0.5em;
+    background: #1c1c1c;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: var(--main);
+}
+
+header .logo .tagline {
+    font-size: 0.9rem;
+    color: var(--text-faded);
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    width: 100%;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.5em 1em;
+    border-radius: var(--radius);
+    border: 1px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-faded);
+}
+
+.search-bar button {
+    padding: 0.5em 1em;
+    border-radius: var(--radius);
+    border: none;
+    background: var(--main);
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-bar button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.search-result {
+    color: var(--white);
+    margin-top: 0.5em;
+    font-weight: 500;
+    display: none;
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+    width: 100%;
+    padding: 1em 2em;
+    columns: 300px;
+    /* column-count: 4; */
+    column-gap: 1em;
+}
+
+@media(max-width: 1200px) {
+    .image-container {
+        column-count: 3;
+    }
+}
+
+@media(max-width: 900px) {
+    .image-container {
+        column-count: 2;
+    }
+}
+
+@media(max-width: 600px) {
+    .image-container {
+        column-count: 1;
+    }
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+    break-inside: avoid;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.img:hover {
+    transform: scale(1.02);
+}
+
+.img img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.desc-btn {
+    display: block;
+    text-align: center;
+    margin-top: 0.3em;
+    padding: 0.5em 2em;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.desc-btn:hover {
+    color: var(--black);
+    background: var(--white);
+}
+
+/* IMAGE DETAILS */
+.image-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 2em 2em 1em 2em;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+a.detail-desc {
+    color: var(--white) !important;
+}
+
+a.detail-desc:hover {
+    background: var(--white);
+    color: var(--black) !important;
+}
+
+.image-details .details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+}
+
+.image-details p {
+    line-height: 1.75rem;
+}
+
+.image-details .details span {
+    font-weight: 600;
+}
+
+.image-details .details a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.image-details .details a:hover {
+    color: var(--white);
+}
+
+.image-details img {
+    width: 60%;
+    height: 80vh;
+    object-fit: scale-down;
+    border-radius: var(--radius);
+}
+
+/* PAGINATION */
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.pag-btn {
+    padding: 0.5em 1em;
+    border: 1px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pag-btn.active {
+    background: var(--white);
+    color: var(--black);
+}
+
+.pag-btn:hover {
+    background: var(--white);
+    color: var(--black);
+}
