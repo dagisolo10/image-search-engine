@@ -3,7 +3,7 @@
 :root {
     --main: #6F40E0;
     --secondary: #008cff;
-    --black: #121212;
+    --black: hsl(0, 0%, 7%);
     --white: #fff;
     --text-faded: hsl(0, 0%, 70%);
     --transition: 0.3s ease;
